@@ -9,7 +9,7 @@
     "@types/react-dom": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "^5.1.6"
   },
   "description": "https://github.com/mui/material-ui/blob/v5.14.5/docs/data/joy/templates/messages/App.tsx",
   "devDependencies": {
@@ -23,5 +23,17 @@
     "eject": "react-scripts eject"
   },
   "name": "8c5cwd",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
