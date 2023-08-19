@@ -6,8 +6,8 @@ import IconButton from '@mui/joy/IconButton';
 import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
-import { UserProps } from '../types';
-import { toggleMessagesPane } from '../utils';
+import { UserProps } from '../../types';
+import { toggleMessagesPane } from '../../utils';
 
 type MessagesPaneHeaderProps = {
   sender: UserProps;

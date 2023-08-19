@@ -4,12 +4,30 @@ import GlobalStyles from '@mui/joy/GlobalStyles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
 import useScript from './useScript';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import MyMessages from './components/MyMessages';
+import Sidebar from './layouts/Sidebar';
+import Header from './layouts/Header';
+import MyMessages from './components/chat/MyMessages';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Login from './components/login/Login';
+import MainLayout from './layouts/MainLayout';
 
 const useEnhancedEffect =
   typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
+
+const router = createBrowserRouter([
+    {
+      path: "/login",
+      element: <Login/>,
+    },
+    {
+      path: "/",
+      element: <MainLayout><MyMessages/></MainLayout>
+    }
+  ]);
 
 export default function JoyMessagesTemplate() {
   const status = useScript(`https://unpkg.com/feather-icons`);
@@ -37,13 +55,7 @@ export default function JoyMessagesTemplate() {
         })}
       />
       <CssBaseline />
-      <Box sx={{ display: 'flex', minHeight: '100dvh' }}>
-        <Header />
-        <Sidebar />
-        <Box component="main" className="MainContent" flex={1}>
-          <MyMessages />
-        </Box>
-      </Box>
+        <RouterProvider router={router} />
     </CssVarsProvider>
   );
 }

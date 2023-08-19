@@ -7,7 +7,7 @@ import Typography from '@mui/joy/Typography';
 import CelebrationOutlinedIcon from '@mui/icons-material/CelebrationOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FileIcon from './FileIcon';
-import { MessageProps } from '../types';
+import { MessageProps } from '../../types';
 
 type ChatBubbleProps = MessageProps & {
   variant: 'sent' | 'received';

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import Box from '@mui/joy/Box';
@@ -14,8 +13,8 @@ import ListItemContent from '@mui/joy/ListItemContent';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
-import MuiLogo from './MuiLogo';
-import ColorSchemeToggle from './ColorSchemeToggle';
+import MuiLogo from '../components/chat/MuiLogo';
+import ColorSchemeToggle from '../components/chat/ColorSchemeToggle';
 import { closeSidebar } from '../utils';
 
 export default function Sidebar() {
